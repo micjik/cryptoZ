@@ -1,0 +1,263 @@
+@import '_colors';
+@import '_fonts';
+body{
+    margin:0;
+    padding:0;
+    
+}
+header{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:40px;
+    padding:20px 0;
+    border:1px thin black;
+}
+.logo{
+    display:flex;
+    gap:10px;
+}
+.logo .logo-image img{
+    filter: brightness(0) invert(0);
+}
+nav{
+    display:flex;
+    gap:10px;
+}
+nav li{
+    list-style: none;
+}
+nav li a{
+    text-decoration: none;
+    color: $mainColor;
+}
+.btn-btn .sign-in{
+    border:none;
+    outline: none;
+    cursor: pointer;
+    background-color: $colorWhite;
+}
+.btn-btn .active{
+    background-color: $bgLinearGradient1;
+    color:$colorWhite;
+    border:none;
+    padding: 12px 24px;
+    border-radius: 5px;
+}
+#hero{
+    height: 759px;
+    display:flex;
+    gap:20px;
+    padding-inline: 5%;
+    background-color: $navyBlue;
+    border-radius: 5px;
+}
+.hero-left{
+    width: 620px;
+}
+.hero-left .hero-text h3{
+    width:618px;
+    color:$colorWhite;
+    padding-top:80px;
+    font-size: 40px;
+    font-weight: 700px;
+    line-height: 1.25;
+    font-style:bold;
+    font-family: $primaryFont;
+}
+.hero-left .hero-description p{
+    width:604px;
+    height: 56px;
+    padding-top: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    font-style: normal;
+    color:$colorWhite;
+}
+
+ .hero-started input{
+    border: none;
+    outline:none;
+    padding:18px 36px !important;
+    border-radius: 10px;
+}
+.hero-started .active{
+    padding:18px 40px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: $bgLinearGradient1;
+    color:$colorWhite;
+    border:none;
+}
+.hero-right{
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.hero-right .hero-cam1{
+    display: flex;
+    justify-content: flex-end;
+}
+.hero-right .hero-cam1 img{
+      margin-left: 100px;
+}
+
+.hero-right .hero-eth{
+    display: flex;
+    justify-content: flex-start;
+}
+.hero-right .hero-eth img{
+    margin-right: 100px;
+    height:150px;
+    width:150px;
+}
+
+.brand{
+    height:82px;
+    padding:24px 120px;
+    display:flex;
+    justify-content: space-around;
+    color: $baseColor;
+    background-color: $colorWhite;
+    font-weight: 700;
+    font-size: 25px;
+}
+.benefits{
+    height:184px;
+    margin: 0 120px;
+    padding: 32px 100px;
+    border:1px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.benefit h3{
+    font-size: 50px;
+    font-weight: 900;
+    padding-left: 30px;
+    
+}
+.benefit{
+    border-right: 1px solid black;
+    
+}
+.benefits .benefit:last-child{
+    border-right: none;
+    padding-left: 30px;
+}
+.benefit p{
+    font-size: 20px;
+    font-weight: 300;
+    padding-right: 50px;
+}
+.crypto{
+    display:flex;
+    height: 866px;
+}
+.crypto-left{
+    width: 488px;
+    height:614px;
+    padding-left: 120px;
+    padding-top: 96px;
+    
+}
+.crypto-left h2{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0px;
+    font-family: sans-serif;
+    color:$cryptoColor;
+}
+.crypto-benefit{
+    width:426px;
+     border-bottom: 1px solid black;
+}
+.crypto-benefit .crypto-num{
+    display:flex;
+    align-items: center;
+    gap: 20px; 
+}
+.crypto-benefit .crypto-num span{
+   font-size: 30px;
+   color:$base2Color;
+   font-weight: 700;
+}
+.crypto-benefit .crypto-num h4{
+    font-size: 24px;
+    font-weight: 600;
+    margin:0;
+    
+}
+.crypto-benefit p{
+    font-size: 20px;
+    padding-left: 35px;
+    font-weight: 200;
+    padding-top: -10px;
+}
+.crypto-right{
+    display:flex;
+    gap:30px;
+    width: 775px;
+    margin-top: 50px;
+    border-radius: 5px;
+    height:816px;
+    background-color:$base3Color;
+    margin-left: 40px;
+    padding-left: 80px;
+    
+}
+.iphone-2, .iphone-3{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+#frame{
+    height: 1793px;
+    width:100%;
+    background-color: $base2Color;
+}
+.flex-frame{
+padding-top: 150px;
+display:grid;
+}
+.item-frame-1{
+    width:491px;
+    height:693px;
+    background-color:$frameColor;
+    border-radius: 10px;
+    margin-left: 120px;
+    padding-bottom: 30px;
+}
+.frame{
+    padding-left:33px;
+    padding-top:40px;
+    
+}
+.portfolio {
+    padding:40px 30px;
+
+}
+.portfolio h2{
+    color:$colorWhite;
+    font-size: 50px;
+}
+.portfolio p{
+    color:$greyColor;
+    font-size: 18px;    
+}
+.item-frame-2{
+    height:337px;
+    width:687px;
+    background-color:$frame2Color;
+    border-radius: 10px;
+    margin-top: 150px;
+    margin-left: 120px;
+}
+
+
+
