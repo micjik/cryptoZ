@@ -104,6 +104,49 @@ nav li a{
 .hero-right .hero-cam1 img{
       margin-left: 100px;
 }
+.hero-right .converter{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height:491px;
+    width:420px;
+    opacity: 0.8;
+    border-radius:20px;
+    padding:20px;
+    border:1px solid $colorWhite;
+    color:$colorWhite;
+}
+.hero-right .converter h3{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: $primaryFont;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+label{
+    font-size: 22px;
+    padding-left: 10px;
+}
+ .input{
+    display:flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width:90%;
+    background-color: $colorWhite;
+    color: $frameColor;
+}
+select, input{
+    border: none;
+    outline:none;
+    background-color: $colorWhite;
+}
+input{
+    margin-top:10px;
+    
+}
+
 
 .hero-right .hero-eth{
     display: flex;

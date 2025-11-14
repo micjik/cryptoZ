@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CryptoZ</title>
     <link rel="stylesheet" href="styles/style.css" />
+    
   </head>
   <body>
     <header>
@@ -53,8 +54,31 @@
         <div class="converter">
           <h3>Currency Converter</h3>
           <div class="amount">
-            <label for="">Amount</label><br />
-            <select name="" id=""></select>
+            <label for="amount">Amount</label><br />
+            <div class="input">
+              <img src="images/Frame 8764.png" alt="">
+               <span>GBP</span>
+              <select name="currency" id=""></select>|
+              <input type="number" id="amount" name="amount">
+            </div>
+          </div>
+          <div class="converted-to">
+            <label for="">Converted  to</label><br/>
+            <div class="input">
+              <img src="images/Frame 8769.png" alt="">
+              <span>AUD</span>
+              <select name="" id="">
+                GBP</select>|
+              <input type="text">
+            </div>
+            <div class="date">
+              <label for="date">Date</label>
+              <div class="input">
+                <input type="date" id="date" name="date">
+              </div>
+            </div>
+            <p>EUR GBP BTC</p>
+
           </div>
         </div>
         <div class="hero-eth">
@@ -110,7 +134,6 @@
               <span>03</span>
               <h4>Security by default</h4>
             </div>
-
             <p>Enable privacy mode and app locking to protect your data</p>
           </div>
         </div>
@@ -511,5 +534,28 @@
 
       </div>
     </footer>
+<script>
+   const access_Key = "63b1592a8c06e786d9c0d6f45cd53fd5"
+
+const apiUrl = "http://data.fixer.io/api/"
+
+const fetchData = async () => {
+  try {
+    const response = await fetch(
+      `${apiUrl}/latest?access_key=${access_Key}&base=EUR&symbols=AUD`
+    );
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+
+  
+};
+
+  fetchData();
+  
+</script>
+   
   </body>
 </html>
