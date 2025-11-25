@@ -108,10 +108,12 @@ nav li a{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    z-index: 99;
     height:491px;
     width:420px;
-    opacity: 0.8;
+    opacity: 80%;
     border-radius:20px;
+    background-color: $bgColor;
     padding:20px;
     border:1px solid $colorWhite;
     color:$colorWhite;

@@ -1,4 +1,9 @@
 #challenges
 1. one of the major challenges I encountered while using Sass was that
    my css wasn't applying after I left my project and I tried to understand 
-   why, I googled everything but the issue still remain the same until I realized I wasn't watching
+   why, I googled everything but the issue still remain the same until I realized I wasn't watching.
+
+#Error:
+
+* I got this error : TypeError: Cannot set properties of null (setting 'innerHTML') at fetchData (index.html:551:51) overrideMethod @ installHook.js:1
+  and I had to google why am getting this error and discovered my id(currency) was mis-spelt.

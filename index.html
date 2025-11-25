@@ -56,20 +56,20 @@
           <div class="amount">
             <label for="amount">Amount</label><br />
             <div class="input">
-              <img src="images/Frame 8764.png" alt="">
-               <span>GBP</span>
+              <img src="images/Frame 8769.png" alt="">
+               <span id="currencyType"></span>
               <select name="currency" id=""></select>|
-              <input type="number" id="amount" name="amount">
+              <input type="number" id="numvalue" value="1" min="0.1" max="100" step="0.1">
             </div>
           </div>
           <div class="converted-to">
             <label for="">Converted  to</label><br/>
             <div class="input">
-              <img src="images/Frame 8769.png" alt="">
-              <span>AUD</span>
+              <img src="images/Frame 8764.png" alt="">
+              <span>GBP</span>
               <select name="" id="">
                 GBP</select>|
-              <input type="text">
+              <input type="text" id="rate">
             </div>
             <div class="date">
               <label for="date">Date</label>
@@ -535,22 +535,34 @@
       </div>
     </footer>
 <script>
-   const access_Key = "63b1592a8c06e786d9c0d6f45cd53fd5"
+   const access_Key = "bbf5194994515eb46bb061bbd1ef483f"
 
-const apiUrl = "http://data.fixer.io/api/"
+   const apiUrl = "http://data.fixer.io/api/latest";
 
+ 
+  
 const fetchData = async () => {
+
   try {
     const response = await fetch(
-      `${apiUrl}/latest?access_key=${access_Key}&base=EUR&symbols=AUD`
+      `${apiUrl}?access_key=${access_Key}`
     );
     const data = await response.json();
-    console.log(data);
+    
+    const myInput = document.getElementById("numvalue")
+    myInput.addEventListener('input', function() {
+   document.getElementById("rate").value = data.rates.GBP * Number(myInput.value)
+    })   
+    document.getElementById("date").value = data.date;
+    document.getElementById("currencyType").innerHTML = data.base
+    console.log(inputValue)
+    console.log(data.date);
+    console.log(data.rates.AUD)
+     
+    
   } catch (error) {
     console.error(error);
   }
-
-  
 };
 
   fetchData();
